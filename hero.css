@@ -1,0 +1,124 @@
+
+.hero {
+    min-height: 60vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(144deg, #162e51 0%, #090d1a 100%);}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="%23c9a227" stroke-width="0.5" opacity="0.1"/></svg>');
+    background-size: 100px;
+    opacity: .5;
+    animation: bgMove 20s linear infinite;
+}
+
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    flex-wrap: wrap; 
+}
+
+.hero-buttons .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.hero-buttons .btn {
+    transition: 
+        transform .25s ease,
+        box-shadow .25s ease,
+        background-color .25s ease,
+        color .25s ease,
+        border-color .25s ease;
+}
+
+.hero-buttons .btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(201, 162, 39, 0.45);
+}
+
+.hero-buttons .btn-primary:hover {
+    background-color: var(--accent-hover);
+    color: #fff;
+}
+
+.hero-buttons .btn-outline:hover {
+    background-color: rgba(201, 162, 39, 0.15);
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+
+
+@keyframes bgMove {
+    to {
+        background-position: 100px 100px;
+    }
+}
+
+.hero-content {
+    text-align: center;
+    z-index: 1;
+    animation: fadeInUp 1s ease-out;
+    padding: 0 1rem;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-badge {
+    display: inline-block;
+    padding: .5rem 1.5rem;
+    background: rgba(201, 162, 39, .2);
+    border: 1px solid var(--accent);
+    border-radius: 50px;
+    margin-bottom: 2rem;
+    font-size: .9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 6vw, 4.5rem);
+    font-weight: 800;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--light) 0%, var(--accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, .7);
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+

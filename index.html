@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department of Justice | NXTRP 2.0</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="hero.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="mobile.css">
+    <link rel="stylesheet" href="dynamic.css">
+    <link rel="icon" type="image/png" href="dojlogog.png">
+</head>
+<body>
+
+<!-- LOADER -->
+<div class="loader" id="loader">
+    <div class="loader-inner">
+        <div class="loader-icon"></div>
+        <div class="loader-text">Department of Justice</div>
+    </div>
+</div>
+
+<!-- PARTICLE CANVAS -->
+<canvas id="particle-canvas"></canvas>
+
+<nav id="navbar" role="navigation" aria-label="Główna nawigacja">
+    <div class="nav-container">
+        <a href="https://dojnxtrp.pl/" class="logo">
+            <i class="fas fa-balance-scale"></i> DOJ
+        </a>
+        <ul class="nav-links">
+            <li><a href="https://dojnxtrp.pl/">Strona Główna</a></li>
+            <li><a href="https://aktualnosci.dojnxtrp.pl">Aktualności</a></li>
+            <li class="has-submenu">
+                <a href="#">Struktura <i class="fas fa-chevron-down"></i></a>
+                <ul class="submenu">
+                    <li><a href="https://rada.dojnxtrp.pl/">Rada Departamentu</a></li>
+                    <li><a href="https://hierarchia.dojnxtrp.pl/">Hierarchia służbowa</a></li>
+                    <li class="submenu-divider"></li>
+                    <li><a href="https://prokuratura.dojnxtrp.pl/">Prokuratura</a></li>
+                    <li><a href="https://sadownictwo.dojnxtrp.pl/">Sądownictwo</a></li>
+                    <li><a href="https://adwokatura.dojnxtrp.pl/">Adwokatura</a></li>
+                    <li><a href="https://irs.dojnxtrp.pl/">Internal Revenue Service</a></li>
+                    <li><a href="https://administracja.dojnxtrp.pl/">Administracja</a></li>
+                </ul>
+            </li>
+            <li><a href="https://dokumenty.dojnxtrp.pl/">Dokumenty</a></li>
+            <li><a href="https://rekrutacja.dojnxtrp.pl/">Rekrutacja</a></li>
+        </ul>
+    </div>
+    <button id="hamburger" class="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+    </button>
+</nav>
+
+<div id="overlay" class="overlay"></div>
+
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-main-menu">
+        <a href="https://dojnxtrp.pl/">Strona główna</a>
+        <a href="https://aktualnosci.dojnxtrp.pl">Aktualności</a>
+        <a href="#" class="mobile-open-structure">Struktura <i class="fas fa-chevron-right"></i></a>
+        <a href="https://dokumenty.dojnxtrp.pl/">Dokumenty</a>
+        <a href="https://rekrutacja.dojnxtrp.pl/">Rekrutacja</a>
+    </div>
+    <div class="mobile-structure-menu">
+        <a href="#" class="mobile-back"><i class="fas fa-chevron-left"></i> Wróć</a>
+        <a href="https://rada.dojnxtrp.pl/">Rada Departamentu</a>
+        <a href="https://hierarchia.dojnxtrp.pl/">Hierarchia służbowa</a>
+        <a href="https://prokuratura.dojnxtrp.pl/">Prokuratura</a>
+        <a href="https://sadownictwo.dojnxtrp.pl/">Sądownictwo</a>
+        <a href="https://adwokatura.dojnxtrp.pl/">Adwokatura</a>
+        <a href="https://irs.dojnxtrp.pl/">Internal Revenue Service</a>
+        <a href="https://administracja.dojnxtrp.pl/">Administracja</a>
+    </div>
+</div>
+
+<a id="maincontent" tabindex="-1"></a>
+
+<section class="hero" id="home">
+    <div class="hero-glow" id="heroGlow"></div>
+    <div class="hero-watermark">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="12" r="4" fill="#C9A227"/>
+            <rect x="48.5" y="12" width="3" height="52" fill="#C9A227"/>
+            <rect x="18" y="18" width="64" height="3" rx="1.5" fill="#C9A227"/>
+            <ellipse cx="28" cy="52" rx="13" ry="6" stroke="#C9A227" stroke-width="2.5" fill="none"/>
+            <ellipse cx="72" cy="52" rx="13" ry="6" stroke="#C9A227" stroke-width="2.5" fill="none"/>
+            <line x1="19" y1="19.5" x2="28" y2="46" stroke="#C9A227" stroke-width="2"/>
+            <line x1="81" y1="19.5" x2="72" y2="46" stroke="#C9A227" stroke-width="2"/>
+            <rect x="44" y="64" width="12" height="4" rx="2" fill="#C9A227"/>
+            <rect x="38" y="68" width="24" height="3" rx="1.5" fill="#C9A227"/>
+        </svg>
+    </div>
+
+    <div class="hero-content">
+        <span class="hero-badge">State of San Andreas</span>
+        <h1>Department <span class="accent-text">of Justice</span></h1>
+        <div class="hero-typewriter">
+            <span id="typewriter-text"></span><span class="typewriter-cursor">|</span>
+        </div>
+        <p>Prawo nie istnieje po to, by było wygodne — istnieje po to, by było przestrzegane.</p>
+        <div class="hero-buttons">
+            <a href="https://rekrutacja.dojnxtrp.pl/" class="btn btn-primary btn-hero">
+                <i class="fas fa-user-plus"></i> Dołącz do nas
+            </a>
+            <a href="https://dokumenty.dojnxtrp.pl/" class="btn btn-outline btn-hero">
+                <i class="fas fa-file-alt"></i> Dokumenty
+            </a>
+        </div>
+    </div>
+
+    <div class="scroll-indicator">
+        <span>SCROLL</span>
+        <div class="scroll-line"></div>
+    </div>
+</section>
+
+<div class="stats-bar">
+    <div class="stat-item reveal">
+        <div class="stat-value" data-target="47">0</div>
+        <div class="stat-label">Aktywnych członków</div>
+    </div>
+    <div class="stat-item reveal" style="--delay:0.1s">
+        <div class="stat-value" data-target="128">0</div>
+        <div class="stat-label">Spraw w tym miesiącu</div>
+    </div>
+    <div class="stat-item reveal" style="--delay:0.2s">
+        <div class="stat-value" data-target="3">0</div>
+        <div class="stat-label">Lata działalności</div>
+    </div>
+    <div class="stat-item reveal" style="--delay:0.3s">
+        <div class="stat-value" data-target="860">0</div>
+        <div class="stat-label">Wyroków wydanych</div>
+    </div>
+</div>
+
+<section class="about" id="about">
+    <div class="section-header reveal">
+        <h2>O Departamencie</h2>
+        <p>Departament Sprawiedliwości stoi na straży prawa, zapewniając sprawiedliwość, bezpieczeństwo i przejrzystość w działaniu instytucji publicznych i podmiotów prywatnych.<br>Każde działanie, każda decyzja i każdy wyrok ma znaczenie dla porządku w San Andreas.</p>
+    </div>
+    <div class="about-grid">
+        <div class="about-card reveal" style="--delay:0s">
+            <i class="fas fa-gavel"></i>
+            <h3>Wymiar Sprawiedliwości</h3>
+            <p>Egzekwowanie prawa i równe traktowanie wszystkich obywateli poprzez sprawiedliwe podejmowanie decyzji.</p>
+        </div>
+        <div class="about-card reveal" style="--delay:0.15s">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Nadzór i Bezpieczeństwo</h3>
+            <p>Sprawowanie kontroli nad działalnością instytucji publicznych i podmiotów gospodarczych, reagując na naruszenia prawa.</p>
+        </div>
+        <div class="about-card reveal" style="--delay:0.3s">
+            <i class="fas fa-file-contract"></i>
+            <h3>Tworzenie Prawa</h3>
+            <p>Analizowanie obowiązujących przepisów, inicjowanie zmian prawnych i wdrażanie nowych regulacji w systemie prawnym.</p>
+        </div>
+    </div>
+</section>
+
+<section class="struktura-section" id="struktura">
+    <div class="section-header reveal">
+        <h2>Struktura Departamentu</h2>
+        <p>Departament składa się z wyspecjalizowanych wydziałów odpowiadających za kluczowe obszary funkcjonowania wymiaru sprawiedliwości w San Andreas.</p>
+    </div>
+
+    <div class="struktura-grid">
+
+        <a href="https://rada.dojnxtrp.pl/" class="dept-card reveal" style="--delay:0s">
+            <div class="dept-card-icon"><i class="fas fa-crown"></i></div>
+            <div class="dept-card-body">
+                <div class="dept-card-label">Kierownictwo</div>
+                <h3>Rada Departamentu</h3>
+                <p>Najwyższy organ zarządzający DOJ. Odpowiada za politykę departamentu i nadzór nad wszystkimi wydziałami.</p>
+            </div>
+            <div class="dept-card-arrow"><i class="fas fa-arrow-right"></i></div>
+        </a>
+
+        <a href="https://hierarchia.dojnxtrp.pl/" class="dept-card reveal" style="--delay:0.08s">
+            <div class="dept-card-icon"><i class="fas fa-sitemap"></i></div>
+            <div class="dept-card-body">
+                <div class="dept-card-label">Organizacja</div>
+                <h3>Hierarchia Służbowa</h3>
+                <p>Pełna struktura stopni i rang obowiązujących w Departamencie wraz z zakresem kompetencji.</p>
+            </div>
+            <div class="dept-card-arrow"><i class="fas fa-arrow-right"></i></div>
+        </a>
+
+        <a href="https://prokuratura.dojnxtrp.pl/" class="dept-card reveal" style="--delay:0.16s">
+            <div class="dept-card-icon"><i class="fas fa-gavel"></i></div>
+            <div class="dept-card-body">
+                <div class="dept-card-label">Wydział</div>
+                <h3>Prokuratura</h3>
+                <p>Prowadzi postępowania przygotowawcze, wnosi akty oskarżenia i reprezentuje interes publiczny przed sądem.</p>
+            </div>
+            <div class="dept-card-arrow"><i class="fas fa-arrow-right"></i></div>
+        </a>
+
+        <a href="https://sadownictwo.dojnxtrp.pl/" class="dept-card reveal" style="--delay:0.24s">
+            <div class="dept-card-icon"><i class="fas fa-balance-scale"></i></div>
+            <div class="dept-card-body">
+                <div class="dept-card-label">Wydział</div>
+                <h3>Sądownictwo</h3>
+                <p>Rozpatruje sprawy cywilne i karne, wydaje wyroki oraz sprawuje nadzór judykacyjny nad postępowaniami.</p>
+            </div>
+            <div class="dept-card-arrow"><i class="fas fa-arrow-right"></i></div>
+        </a>
+
+        <a href="https://adwokatura.dojnxtrp.pl/" class="dept-card reveal" style="--delay:0.32s">
+            <div class="dept-card-icon"><i class="fas fa-user-tie"></i></div>
+            <div class="dept-card-body">
+                <div class="dept-card-label">Wydział</div>
+                <h3>Adwokatura</h3>
+                <p>Zapewnia profesjonalną obronę prawną obywatelom San Andreas i reprezentuje klientów przed sądem.</p>
+            </div>
+            <div class="dept-card-arrow"><i class="fas fa-arrow-right"></i></div>
+        </a>
+
+        <a href="https://irs.dojnxtrp.pl/" class="dept-card reveal" style="--delay:0.40s">
+            <div class="dept-card-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+            <div class="dept-card-body">
+                <div class="dept-card-label">Wydział</div>
+                <h3>Internal Revenue Service</h3>
+                <p>Kontroluje rozliczenia podatkowe, prowadzi postępowania skarbowe i egzekwuje przepisy finansowe.</p>
+            </div>
+            <div class="dept-card-arrow"><i class="fas fa-arrow-right"></i></div>
+        </a>
+
+        <a href="https://administracja.dojnxtrp.pl/" class="dept-card reveal" style="--delay:0.48s">
+            <div class="dept-card-icon"><i class="fas fa-cogs"></i></div>
+            <div class="dept-card-body">
+                <div class="dept-card-label">Wydział</div>
+                <h3>Administracja</h3>
+                <p>Zarządza dokumentacją i zasobami departamentu, zapewniając sprawne funkcjonowanie całej organizacji.</p>
+            </div>
+            <div class="dept-card-arrow"><i class="fas fa-arrow-right"></i></div>
+        </a>
+
+    </div>
+</section>
+
+<!-- ═══ CTA ═══ -->
+<section class="cta-section">
+    <div class="cta-inner reveal">
+        <div class="cta-text">
+            <div class="cta-label"><i class="fas fa-star"></i> Rekrutacja otwarta</div>
+            <h2>Chcesz służyć sprawiedliwości?</h2>
+            <p>Dołącz do Departamentu Sprawiedliwości San Andreas i stań się częścią systemu budującego porządek w NXTRP 2.0.</p>
+        </div>
+        <div class="cta-action">
+            <a href="https://rekrutacja.dojnxtrp.pl/" class="btn btn-primary">
+                <i class="fas fa-user-plus"></i> Aplikuj teraz
+            </a>
+            <a href="https://discord.gg/yJ2vK65k5r" target="_blank" class="cta-discord">
+                <i class="fab fa-discord"></i> Serwer Discord
+            </a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4>Department of Justice</h4>
+            <p>Oficjalna strona Departamentu Sprawiedliwości<br>NXTRP 2.0</p>
+        </div>
+        <div class="footer-section">
+            <h4>Szybkie linki</h4>
+            <a href="https://dojnxtrp.pl/">Strona główna</a>
+            <a href="https://aktualnosci.dojnxtrp.pl">Aktualności</a>
+            <a href="https://dokumenty.dojnxtrp.pl/">Dokumenty</a>
+            <a href="https://rada.dojnxtrp.pl/">Rada Departamentu</a>
+            <a href="https://hierarchia.dojnxtrp.pl/">Hierarchia służbowa</a>
+            <a href="https://rekrutacja.dojnxtrp.pl/">Rekrutacja</a>
+        </div>
+        <div class="footer-section">
+            <h4>Struktura</h4>
+            <a href="https://prokuratura.dojnxtrp.pl/">Prokuratura</a>
+            <a href="https://sadownictwo.dojnxtrp.pl/">Sądownictwo</a>
+            <a href="https://adwokatura.dojnxtrp.pl/">Adwokatura</a>
+            <a href="https://irs.dojnxtrp.pl/">Internal Revenue Service</a>
+            <a href="https://administracja.dojnxtrp.pl/">Administracja</a>
+        </div>
+        <div class="footer-section">
+            <h4>Kontakt</h4>
+            <a href="https://discord.gg/yJ2vK65k5r" target="_blank"><i class="fab fa-discord"></i> Aplikacja Departamentu</a>
+            <a href="https://discord.gg/h5h69dvCpX" target="_blank"><i class="fab fa-discord"></i> NXTRP 2.0</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 NXTRP 2.0 – DOJ. Wszelkie prawa zastrzeżone.</p>
+        <p>&copy; Made by ve_xs.</p>
+    </div>
+</footer>
+
+<script src="core.js"></script>
+</body>
+</html>

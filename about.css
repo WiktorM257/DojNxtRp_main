@@ -1,0 +1,45 @@
+/* ========== ABOUT SECTION - BROWN ========== */
+
+.about {
+    background: linear-gradient(180deg, var(--dark) 0%, var(--primary) 100%);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-card {
+    background: rgba(42, 31, 22, .3);
+    border: 1px solid rgba(201, 162, 39, .2);
+    border-radius: 20px;
+    padding: 2rem;
+    transition: all .3s;
+}
+
+.about-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent);
+    box-shadow: 0 20px 40px rgba(201, 162, 39, .2);
+}
+
+.about-card i {
+    font-size: 2.5rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.about-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: .8rem;
+}
+
+.about-card p {
+    color: rgba(255, 255, 255, .7);
+    line-height: 1.7;
+    font-size: .95rem;
+}

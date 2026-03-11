@@ -1,0 +1,315 @@
+
+@media(max-width: 768px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .recruitment-header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .docs-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .schedule-grid,
+    .archive-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero-badge {
+        
+       margin-top: 4vh;
+    }
+}
+
+
+
+
+.documents {
+    background: #1f3f63 !important;
+    padding: 4rem 1rem !important;
+}
+
+.documents .docs-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+    gap: 2rem !important;
+    align-items: stretch !important;
+}
+
+.documents .doc-card {
+    background: linear-gradient(
+        180deg,
+        rgba(18, 38, 63, 0.95),
+        rgba(13, 29, 50, 0.98)
+    ) !important;
+
+    border-radius: 18px !important;
+    padding: 2rem 1.8rem !important;
+    border: 1px solid rgba(201, 162, 39, 0.35) !important;
+    box-shadow: 0 20px 50px rgba(0,0,0,.35) !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+
+    transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease !important;
+}
+
+.documents .doc-card:hover {
+    transform: translateY(-6px) !important;
+    border-color: var(--accent) !important;
+    box-shadow: 0 25px 60px rgba(0,0,0,.45) !important;
+}
+
+.documents .doc-header {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 1rem !important;
+    margin-bottom: 1.2rem !important;
+}
+
+.documents .doc-icon i {
+    color: var(--accent) !important;
+    font-size: 1.8rem !important;
+}
+
+.documents .doc-info h3 {
+    font-size: 1.2rem !important;
+    line-height: 1.35 !important;
+    margin: 0 0 .3rem !important;
+    color: #fff !important;
+}
+
+.documents .doc-info span {
+    font-size: .85rem !important;
+    opacity: .75 !important;
+}
+
+.documents .doc-card p {
+    font-size: .95rem !important;
+    color: rgba(255,255,255,.85) !important;
+    line-height: 1.55 !important;
+    margin: .6rem 0 1.4rem !important;
+
+    display: -webkit-box !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+}
+
+.documents .doc-footer {
+    margin-top: auto !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 1rem !important;
+}
+
+.documents .doc-meta {
+    font-size: .85rem !important;
+    opacity: .8 !important;
+}
+
+.documents .btn-doc {
+    background: rgba(255,255,255,.12) !important;
+    border: 1.5px solid rgba(255,255,255,.35) !important;
+    color: #fff !important;
+}
+
+.mobile-main-menu,
+.mobile-structure-menu {
+    display: none;
+}
+
+.mobile-menu.show-main .mobile-main-menu {
+    display: block;
+}
+
+.mobile-menu.show-structure .mobile-structure-menu {
+    display: block;
+}
+
+
+#hamburger {
+    display: none;
+    width: 32px;
+    height: 28px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+    position: relative;
+    margin-left: auto; 
+    margin-top: -5.5vh;
+    margin-bottom: 1vh;
+    margin-right: 5vw;
+
+}
+
+#hamburger span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--gold, #d4af37);
+    border-radius: 2px;
+    transition: 0.3s ease;
+    display: block;
+}
+
+#hamburger span:nth-child(1) {
+    top: 0;
+}
+
+#hamburger span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#hamburger span:nth-child(3) {
+    bottom: 0;
+}
+
+#hamburger.open span:nth-child(1) {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+#hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+#hamburger.open span:nth-child(3) {
+    bottom: auto;
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 62px;
+    right: -100%;
+    width: 300px;
+    max-width: 85vw;
+    height:100vh;
+    background: linear-gradient(180deg, rgba(15, 15, 15, 0.98) 0%, rgba(20, 20, 20, 0.95) 100%);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 2rem 0;
+    transition: right 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    z-index: 999;
+    overflow-y: auto;
+    border-left: 2px solid rgba(212, 175, 55, 0.3);
+    box-shadow: -5px 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.mobile-menu.open {
+    right: 0;
+}
+
+.mobile-menu a {
+    display: block;
+    padding: 1.2rem 2rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.mobile-menu a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background: var(--gold, #d4af37);
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+}
+
+.mobile-menu a:hover,
+.mobile-menu a:focus {
+    background: rgba(212, 175, 55, 0.1);
+    color: var(--gold, #d4af37);
+    padding-left: 2.5rem;
+}
+
+.mobile-menu a:hover::before,
+.mobile-menu a:focus::before {
+    transform: scaleY(1);
+}
+
+.mobile-menu a:first-child {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 998;
+    backdrop-filter: blur(3px);
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+@media (max-width: 968px) {
+    #hamburger {
+        display: flex;
+    }
+    
+    .nav-links {
+        display: none !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .mobile-menu {
+        width: 100%;
+        max-width: 100%;
+        border-left: none;
+    }
+    
+    .mobile-menu a {
+        font-size: 1rem;
+        padding: 1rem 1.5rem;
+    }
+}
+
+.mobile-menu {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+body.menu-open {
+    overflow: hidden;
+
+}
