@@ -370,7 +370,7 @@ p, a, li, .btn {
     z-index: 0;
 }
 /* Ensure content is above canvas */
-section, footer, .mobile-menu, .overlay, .loader, .stats-bar {
+section, footer, .mobile-menu, .overlay, .loader, .-bar {
     position: relative;
     z-index: 1;
 }
@@ -515,7 +515,7 @@ nav {
 /* ─── STATS BAR ──────────────────────────────────────────── */
 .stats-bar {
     display: grid; grid-template-columns: repeat(4, 1fr);
-    background:  rgb(5 10 16 / 65%);;
+    background:   rgba(22,46,81,0.6);
     border-top: 1px solid rgba(201,162,39,0.2);
     border-bottom: 1px solid rgba(201,162,39,0.15);
     padding: 2rem 3rem; gap: 1rem;
